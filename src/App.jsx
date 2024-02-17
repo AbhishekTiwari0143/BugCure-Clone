@@ -1,4 +1,7 @@
 import "./App.css";
+
+import { Analytics } from "@vercel/analytics/react";
+
 import Counter from "./Components/Counter";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -19,6 +22,7 @@ function App() {
       <Portfolio />
       <Counter />
       <Footer />
+      <Analytics />
     </>
   );
 }
