@@ -42,7 +42,7 @@ const Portfolio = () => {
         <h1 className="text-5xl text-white font-bold text-center text-shadow my-12 mb-12">
           Portfolio
         </h1>
-        <div className="sm:w-[400px] md:w-[1050px] m-auto ">
+        <div className=" w-[350px] sm:w-[400px] lg:w-[950px] m-auto">
           <Swiper
             // install Swiper modules
             modules={[Autoplay, A11y]}
@@ -53,7 +53,7 @@ const Portfolio = () => {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
-              640: {
+              1000: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
@@ -64,12 +64,12 @@ const Portfolio = () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
-            <div className="sm:w-full md:w-[500px]">
+            <div className="w-[100px] sm:w-[500px] lg:w-[500px]">
               {data.map((item) => {
                 return (
                   <SwiperSlide key={item.id}>
                     <img
-                      className="rounded-xl box-shadow object-contain "
+                      className="rounded-xl box-shadow object-contain w-[400px]"
                       src={item.image}
                       alt="image 1"
                     />
