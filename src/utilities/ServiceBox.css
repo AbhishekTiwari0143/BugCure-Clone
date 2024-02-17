@@ -1,0 +1,22 @@
+.serviceBox {
+  cursor: pointer;
+}
+
+.serviceBox:hover > div {
+  background-color: rgba(0, 0, 0, 0.575);
+  border-radius: 1rem;
+}
+
+.serviceBox > .service > h1 {
+  transition: all 0.5s;
+}
+
+.serviceBox:hover > .service > h1 {
+  transition: all 0.5s;
+  bottom: 15rem;
+}
+@media screen and (max-width: 770px) {
+  .serviceBox:hover > .service > h1 {
+    bottom: 5rem;
+  }
+}
