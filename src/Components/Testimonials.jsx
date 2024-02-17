@@ -11,7 +11,7 @@ const Testimonials = () => {
       >
         Client <br /> Testimonials
       </h1>
-      <div className="w-1/2 h-auto px-4 md:px-6 lg:w-[698px] mt-8">
+      <div className="w-full md:w-1/2 h-auto px-4 md:px-6 lg:w-[698px] mt-8">
         <div className="slides bg-white rounded-2xl md:bg-transparent ">
           <Testimonial />
         </div>
