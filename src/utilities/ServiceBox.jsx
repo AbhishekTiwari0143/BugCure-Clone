@@ -7,6 +7,8 @@ const ServiceBox = () => {
       {Services.map((service) => {
         return (
           <div
+            data-aos="fade-up"
+            data-aos-delay={100 * service.id}
             key={service.id}
             className="serviceBox relative h-[200px] rounded-2xl box-shadow md:h-[400px] "
           >

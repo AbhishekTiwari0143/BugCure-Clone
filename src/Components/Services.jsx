@@ -2,7 +2,7 @@ import ServiceBox from "../utilities/ServiceBox";
 
 const Services = () => (
   <>
-    <section className="services py-16">
+    <section className="services py-16 container m-auto">
       <h1 className="title montserrat text-5xl font-semibold text-[#441151] grid text-center py-12 mb-8">
         Services
       </h1>

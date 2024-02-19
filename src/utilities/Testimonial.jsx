@@ -24,8 +24,6 @@ const Testimonial = () => {
       autoplay={{ delay: 5000, disableOnInteraction: false }}
       speed={1000}
       loop={true}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       <div className="swiper-button-prev text-[#441151] w-4 show after:hidden">
         <FontAwesomeIcon icon={faAngleLeft} className="hidden sm:block" />

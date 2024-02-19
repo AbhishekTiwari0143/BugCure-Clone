@@ -1,28 +1,33 @@
 import "./App.css";
 
-import { Analytics } from "@vercel/analytics/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import Counter from "./Components/Counter";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Home from "./Components/Home";
-import Portfolio from "./Components/Portfolio";
-import Services from "./Components/Services";
-import Testimonials from "./Components/Testimonials";
-import Workflow from "./Components/Workflow";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
+import { Header, Footer } from "./Components";
+import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      // Global settings (optional)
+
+      duration: 1000, // Animation duration
+      easing: "ease", // Easing function for animation
+      once: true, // Whether animation should only happen once
+    });
+  }, []);
+
   return (
     <>
       <Header />
-      <Home />
-      <Services />
-      <Testimonials />
-      <Workflow />
-      <Portfolio />
-      <Counter />
+      <Outlet />
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }

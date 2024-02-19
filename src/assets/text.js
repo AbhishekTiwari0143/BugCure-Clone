@@ -59,4 +59,80 @@ export const testimonials = [
   },
 ];
 
+//Portfolios
+import portfolio1 from "../assets/client-1.webp";
+import portfolio2 from "../assets/client-2.webp";
+import portfolio3 from "../assets/client-3.webp";
+import portfolio4 from "../assets/client-4.webp";
+import portfolio5 from "../assets/client-5.webp";
+
+export const portfolio = [
+  {
+    id: 1,
+    image: portfolio1,
+    title: "Myiaar International",
+  },
+  {
+    id: 2,
+    image: portfolio2,
+    title: "Beat Coffee",
+  },
+  {
+    id: 3,
+    image: portfolio3,
+    title: "Portfolio",
+  },
+  {
+    id: 4,
+    image: portfolio5,
+    title: "Shop4Smile",
+  },
+  {
+    id: 5,
+    image: portfolio4,
+    title: "DSK Artist",
+  },
+];
+
+//Blogs
+import tips from "../assets/tips.png";
+import security from "../assets/cybersecurity.png";
+import Importance from "../assets/importance_of_website_in_business.png";
+
+export const blogs = [
+  {
+    id: 1,
+    to: "10-Proven-Tips-to-Build-an-Impressive-Website",
+    image: tips,
+    title: "10 Proven Tips to Build an Impressive Website",
+    date: "October 12, 2023",
+  },
+  {
+    id: 2,
+    image: Importance,
+    to: "Importance-of-Website-In-Business:-Power-of-First-Impression",
+    title: "Importance of Website In Business: Power of First Impression",
+    date: "October 10, 2023",
+  },
+  {
+    id: 3,
+    image: security,
+    to: "Securing-Businesses:-Importance-Of-Cybersecurity",
+    title: "Securing Businesses: Importance Of Cybersecurity",
+    date: "October 5, 2023",
+  },
+];
+
 export default "nice";
+
+export const BlogsSection = [
+  {
+    id: 1,
+    image: tips,
+    title: "10 Proven Tips to Build an Impressive Website",
+    subtitle: "By Pooja Yadav / October 15, 2023",
+    blogTitle: "Introduction",
+    blogParagraph:
+      "To ensure your website is nothing short of impressive, we’ve compiled 10 proven tips to help you master web design. From professional aesthetics to security measures, these tips will guide you in creating an online presence that stands out. A website is often the first point of contact between your business and potential customers. The design and functionality of your website play a crucial role in creating a lasting impression. So, the following are the tips to make your website stand out:",
+  },
+];

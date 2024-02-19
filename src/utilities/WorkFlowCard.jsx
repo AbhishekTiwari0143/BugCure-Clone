@@ -44,10 +44,12 @@ const workflowData = [
 const WorkFlowCard = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 my-16 md:my-15 md:flex-row">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 my-16 md:my-15 md:flex-row">
         {workflowData.map((workflow) => {
           return (
             <div
+              data-aos="fade-up"
+              data-aos-delay={100 * workflow.id}
               key={workflow.id}
               className="card cursor-pointer p-4 text-center workbox-shadow  hover:cursor-Pointer"
             >

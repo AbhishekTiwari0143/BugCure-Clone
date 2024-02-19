@@ -1,49 +1,69 @@
 import { useState } from "react";
 
-const InputField = ({ placeholder: name }) => {
-  const [inputValue, setInputValue] = useState("");
-  const [isError, SetIsError] = useState(false);
-  const [EmailError, setEmailError] = useState(false);
+const InputField = ({ placeholder: name, valid, data }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+  });
 
   const handleChange = (e) => {
-    setInputValue(e.target.value);
-
-    // Handle Email
-    // if (
-    //   name.includes("Email") &&
-    //   inputValue.trim() &&
-    //   !inputValue.includes("@") &&
-    //   !inputValue.includes(".g")
-    // ) {
-    //   console.log("yes");
-    //   setEmailError(true);
-    // } else {
-    //   console.log("No");
-    //   setEmailError(false);
-    // }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleFocus = () => {
-    if (inputValue.trim().length === 0) {
-      console.log("nice");
-      SetIsError(true);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log("Form submitted successfully:", formData);
+      // You can submit the form data here
     } else {
-      SetIsError(false);
+      console.log("Form has errors. Please correct them.");
+    }
+  };
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = { ...errors };
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      valid = false;
+    } else {
+      newErrors.name = "";
     }
 
-    // Handle Email
-    // if (
-    //   name.includes("Email") &&
-    //   inputValue.trim() &&
-    //   !inputValue.includes("@") &&
-    //   !inputValue.includes(".g")
-    // ) {
-    //   console.log("yes");
-    //   setEmailError(true);
-    // } else {
-    //   console.log("No");
-    //   setEmailError(false);
-    // }
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+      valid = false;
+    } else {
+      newErrors.email = "";
+    }
+
+    // Mobile number validation
+    if (!formData.mobile.trim()) {
+      newErrors.mobile = "Mobile number is required";
+      valid = false;
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Mobile number is invalid";
+      valid = false;
+    } else {
+      newErrors.mobile = "";
+    }
+
+    setErrors(newErrors);
+    return valid;
   };
 
   return (
@@ -51,14 +71,16 @@ const InputField = ({ placeholder: name }) => {
       <div className="input-field">
         <input
           type="text"
-          className={`text-base text-gray-500 outline-none input-shadow w-full p-1
-          border-b-2 focus:border-b-black ${isError && "border-b-red-500"}`}
+          className={`text-lg text-gray-500 outline-none input-shadow w-full p-1
+          border-b-2 focus:border-b-black 
+          
+          `}
           placeholder={name}
-          value={inputValue}
+          name={name}
+          // value={formData.name}
           onChange={handleChange}
-          onBlur={handleFocus}
         />
-        {EmailError && <h1 className="text-red-600">Please enter {name} </h1>}
+        {/* {errors && <h1 className="text-red-600">Please enter {name} </h1>} */}
       </div>
     </div>
   );
