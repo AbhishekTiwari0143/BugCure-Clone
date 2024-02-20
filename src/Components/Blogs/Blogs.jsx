@@ -1,4 +1,4 @@
-import BlogsCard from "../utilities/BlogsCard";
+import BlogsCard from "../../utilities/Blogs/BlogsCard";
 import { useEffect } from "react";
 
 const Blogs = () => {

@@ -1,7 +1,7 @@
-import webDevImage from "../assets/webDev.webp";
-import webApp from "../assets/Web&App.webp";
-import ECommerce from "../assets/ECommerse.webp";
-import DMarketing from "../assets/DMarketing.webp";
+import webDevImage from "../assets/Features-images/webDev.webp";
+import webApp from "../assets/Features-images/Web&App.webp";
+import ECommerce from "../assets/Features-images/ECommerse.webp";
+import DMarketing from "../assets/Features-images/DMarketing.webp";
 
 export const Services = [
   {
@@ -28,9 +28,9 @@ export const Services = [
 
 // Testimonials
 
-import profile1 from "../assets/testimonial-profile-1.webp";
-import profile2 from "../assets/testimonial-profile-2.webp";
-import profile3 from "../assets/testimonial-profile-3.webp";
+import profile1 from "../assets/Testimonials-images/testimonial-profile-1.webp";
+import profile2 from "../assets/Testimonials-images/testimonial-profile-2.webp";
+import profile3 from "../assets/Testimonials-images/testimonial-profile-3.webp";
 
 export const testimonials = [
   {
@@ -60,11 +60,11 @@ export const testimonials = [
 ];
 
 //Portfolios
-import portfolio1 from "../assets/client-1.webp";
-import portfolio2 from "../assets/client-2.webp";
-import portfolio3 from "../assets/client-3.webp";
-import portfolio4 from "../assets/client-4.webp";
-import portfolio5 from "../assets/client-5.webp";
+import portfolio1 from "../assets/Clients-images/client-1.webp";
+import portfolio2 from "../assets/Clients-images/client-2.webp";
+import portfolio3 from "../assets/Clients-images/client-3.webp";
+import portfolio4 from "../assets/Clients-images/client-4.webp";
+import portfolio5 from "../assets/Clients-images/client-5.webp";
 
 export const portfolio = [
   {
@@ -95,9 +95,9 @@ export const portfolio = [
 ];
 
 //Blogs
-import tips from "../assets/tips.png";
-import security from "../assets/cybersecurity.png";
-import Importance from "../assets/importance_of_website_in_business.png";
+import tips from "../assets/Blogs-images/tips.png";
+import security from "../assets/Blogs-images/cybersecurity.png";
+import Importance from "../assets/Blogs-images/importance_of_website_in_business.png";
 
 export const blogs = [
   {
