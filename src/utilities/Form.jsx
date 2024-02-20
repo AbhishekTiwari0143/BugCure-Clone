@@ -70,7 +70,6 @@ const Form = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  console.log(values);
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -108,7 +107,6 @@ const Form = () => {
           </h2>
           <ul className="grid gap-2">
             {CheckBox.map((item) => {
-              console.log(item);
               return <InputLabel key={item.key} item={item} />;
             })}
           </ul>
@@ -122,7 +120,10 @@ const Form = () => {
         </form>
       )}
       {submitted && (
-        <form className="form w-[90%] m-auto bg-white p-8 rounded-lg md:w-[60%] md:max-w-[60%] grid mt-8 md:mt-auto md:gap-4 box-shadow">
+        <form
+          data-aos="fade"
+          className="form w-[90%] m-auto bg-white p-8 rounded-lg md:w-[60%] md:max-w-[60%] grid mt-8 md:mt-auto md:gap-4 box-shadow"
+        >
           <div className="text-message flex flex-col">
             <h1 className="text-center mb-6 text-3xl md:text-4xl font-semibold text-[#441151]">
               Form Submitted

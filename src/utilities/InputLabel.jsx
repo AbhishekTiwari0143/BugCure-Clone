@@ -1,5 +1,4 @@
 const InputLabel = (props) => {
-  console.log(props.item.id);
   return (
     <>
       <li className="flex gap-4 text-lg montserrat font-medium">

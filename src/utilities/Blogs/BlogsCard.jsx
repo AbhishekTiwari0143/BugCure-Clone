@@ -18,7 +18,6 @@ const BlogsCard = () => {
             <img src={blog.image} alt="image" className="rounded-t-md" />
 
             <div className="info p-4 h-40 flex flex-col justify-between">
-              {console.log(blog.to)}
               <Link to={`/blogs/${blog.to}`}>
                 <h1 className="text-2xl font-bold text-[#441151] hover:text-black cursor-pointer">
                   &quot;{blog.title}&quot;
