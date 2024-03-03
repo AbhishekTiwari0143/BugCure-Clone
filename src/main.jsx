@@ -11,6 +11,7 @@ import {
   Importance,
   Terms,
   Status,
+  Error,
 } from "./Components";
 
 import {
@@ -24,11 +25,13 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />}></Route>
-      <Route path="blogs" exact element={<Blogs />}></Route>
-      <Route
-        path="/blogs/10-Proven-Tips-to-Build-an-Impressive-Website"
-        element={<Tips />}
-      />
+
+      <Route path="blogs" element={<Blogs />}>
+        <Route
+          path="10-Proven-Tips-to-Build-an-Impressive-Website"
+          element={<Tips />}
+        />
+      </Route>
       <Route
         path="/blogs/Importance-of-Website-In-Business:-Power-of-First-Impression"
         element={<Importance />}
@@ -39,6 +42,7 @@ const router = createBrowserRouter(
       />
       <Route path="terms" exact element={<Terms />}></Route>
       <Route path="status" exact element={<Status />}></Route>
+      <Route path="" exact element={<Status />}></Route>
     </Route>
   )
 );

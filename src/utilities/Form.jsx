@@ -1,9 +1,12 @@
 import { useState } from "react";
 import InputField from "./InputField";
 import InputLabel from "./InputLabel";
+import axios from "axios";
+import { useEffect } from "react";
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [store, setStore] = useState(false);
 
   const [values, setValues] = useState({
     username: "",
@@ -78,6 +81,28 @@ const Form = () => {
     console.log(enteredValue);
   };
 
+  useEffect(() => {
+    // const handleSaveUser = () => {
+    const user = {
+      userName: values.username,
+      email: values.email,
+      number: values.number,
+    };
+    axios
+      .post(
+        "https://frontend-mentor-challenges-production.up.railway.app/bugcure",
+        user
+      )
+      .then(() => {
+        setSubmitted(true);
+        setStore((prev) => !prev);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // };
+  }, [store]);
+
   return (
     <>
       {!submitted && (
@@ -114,6 +139,9 @@ const Form = () => {
           <button
             type="submit"
             className="text-2xl w-max rounded-xl text-white m-auto px-10 py-2 font-medium bg-[#441151] mt-4"
+            onClick={() => {
+              setStore((prev) => !prev);
+            }}
           >
             Submit
           </button>

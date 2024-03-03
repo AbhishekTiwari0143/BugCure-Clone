@@ -15,11 +15,11 @@ const Blogs = () => {
             data-aos-duration={1000}
             className="text-3xl font-semibold text-white text-shadow md:text-6xl text-center"
           >
-            Blogs: Format will apply soon!!
+            Blogs
           </h1>
         </div>
         <div className="blogs h-full container m-auto grid grid-cols-1 gap-8 my-16 md:grid-cols-3 px-6">
-          <BlogsCard />
+          <BlogsCard />;
         </div>
       </section>
     </>

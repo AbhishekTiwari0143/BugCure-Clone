@@ -12,6 +12,7 @@ import Importance from "./Blogs/Importance";
 import Security from "./Blogs/Security";
 import Terms from "./Blogs/Terms";
 import Status from "./Blogs/Status";
+import Error from "./Error";
 
 export {
   Header,
@@ -28,4 +29,5 @@ export {
   Blogs,
   Terms,
   Status,
+  Error,
 };
